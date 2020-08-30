@@ -6,7 +6,9 @@ description: Page with concepts and examples about encryption.
 
 ## What is Encryption?
 
-After reading in inumerous website to understand the concept on a certain level
+My motivation to understand encryption was using the software for backups called borg. Since it uses GPG to encrypt the backups and i was having some issues regarding the encryption itself, i decided to start from scratch.
+
+Encryption is a two-way function, meaning.. 
 
 ## How to use GPG on Ubuntu \(18.04\)
 
@@ -15,6 +17,10 @@ As talked in the beginning of the concepts of this section, GPG uses an assymetr
 I followed this tutorial: [https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages](https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages)
 
 But even though it didn't make clear for me how the GPG actually works in practice when you want to send someone a file, in this case i'm sending myself a file to test it out.
+
+As said before, this assume we have already generated our GPG keys, but just to make sure it was generated:
+
+![](.gitbook/assets/image%20%2812%29.png)
 
 First we create a txt file:
 
@@ -40,5 +46,13 @@ See that when using gpg without arguments/flags it doesn't know what to do, so i
 
 Another way to have more control when decrypting is:
 
-![](.gitbook/assets/image%20%2812%29.png)
+![](.gitbook/assets/image%20%2813%29.png)
+
+Some useful sources that i found to understand better GPG: [https://github.com/whatbirdisthat/gpg-hello-world](https://github.com/whatbirdisthat/gpg-hello-world)
+
+## Using same GPG key in Windows 10 \(created originally in Ubuntu\)
+
+{% embed url="https://unix.stackexchange.com/questions/184947/how-to-import-secret-gpg-key-copied-from-one-machine-to-another" %}
+
+
 
