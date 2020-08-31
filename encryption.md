@@ -67,13 +67,9 @@ Another way to have more control when decrypting is:
 
 ![](.gitbook/assets/image%20%2813%29.png)
 
-Some useful sources that i found to understand better GPG: whatbirdis/hellow
+Some useful sources that i found to understand better GPG: [https://github.com/whatbirdisthat/gpg-hello-world](https://github.com/whatbirdisthat/gpg-hello-world)
 
 ## Using same GPG key in Windows 10 \(created originally in Ubuntu\)
-
-{% embed url="https://unix.stackexchange.com/questions/184947/how-to-import-secret-gpg-key-copied-from-one-machine-to-another" %}
-
-
 
 ## Hashing vs Encryption
 
