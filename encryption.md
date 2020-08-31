@@ -6,9 +6,28 @@ description: Page with concepts and examples about encryption.
 
 ## What is Encryption?
 
-My motivation to understand encryption was using the software for backups called borg. Since it uses GPG to encrypt the backups and i was having some issues regarding the encryption itself, i decided to start from scratch.
+My motivation to understand encryption was using the software for backups in Ubuntu called borg. Since it uses GPG to encrypt the backups and i was having some issues regarding the encryption itself, i decided to start from scratch.
 
-Encryption is a two-way function, meaning.. 
+Encryption is a two-way function, meaning we encrypt it with the intention of decrypting it later, the algorithm that does the encryption is called **encryption key**.
+
+A simple encryption key \(algorithm\), back in the day in the analogue era was the shift cipher, which consisted of taking a whole number, e.g.: 2. Now if we want to encrypt a text we would shift every letter by two in the alphabet order:
+
+"Hello world"
+
+H -&gt; J \| E -&gt; G \| L -&gt; N \| O -&gt; Q  
+So hello would become:
+
+"JGNNQ", in order to decrypt it we would need the key, which is the number, which is n=2.
+
+In the digital era a public key is used to encrypt and a private key to decrypt, meaning we have two different keys, opposed to the example above. **And the public and private keys are mathematically related but you can't derive one to the other and vice-versa**. 
+
+This public-private key structure is called PKI \(Public Key Infrastructure\) and is widely used. PKI is defined to be an assymetric encryption, assymetric because the two keys are different from each other. While a symmetric encryption uses one key for both encryption and decryption, which is not scalable with you think, you couldn't share with parties that you don't trust.
+
+Manoelito has gave me a quick lesson about encryption:
+
+SSL/TLS: is an encryption for the data in MOVEMENT, not static. Works like a tunnel. That's why we see on websites with https, which the "s" stands for security, meaning the website uses TLS \(Transport Layer Security\). SSL is an old standard for Socket Security Layer. By the way: TLS uses symmetric encryption.
+
+GPG: is encryption for the data when it's static.
 
 ## How to use GPG on Ubuntu \(18.04\)
 
