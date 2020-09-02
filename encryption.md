@@ -73,5 +73,5 @@ Some useful sources that i found to understand better GPG: [https://github.com/w
 
 ## Hashing vs Encryption
 
-While hashing is based on one-way functions, i.e: functions that are easy to compute an input but hard to invert them given a random image.
+While hashing is based on one-way functions, i.e: functions that are easy to compute an input but hard to invert them given a random image. While Ricardo has been ...
 
