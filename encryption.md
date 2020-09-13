@@ -91,7 +91,7 @@ By the way, in order to copy the SSH we would do the same as well:
 
 `sec rsa3072/2A34BE01FB455DE7 2020-08-27 [SC] [expires: 2022-08-27]`
 
-Realize that now in order to generate our GPG public key to paste in GitHub, for instance, we only get this part from the rsa3072: **2A34BE01FB455DE7**
+Realize that now in order to generate our GPG public key to paste in GitHub, for instance, we only have to provide the **ID** of our GPG key, which is this part from the rsa3072: **2A34BE01FB455DE7**
 
 `$ gpg --armor --export 2A34BE01FB455DE7`
 
