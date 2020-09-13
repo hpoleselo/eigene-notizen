@@ -69,6 +69,34 @@ Another way to have more control when decrypting is:
 
 Some useful sources that i found to understand better GPG: [https://github.com/whatbirdisthat/gpg-hello-world](https://github.com/whatbirdisthat/gpg-hello-world)
 
+## Importing GPG keys on Github
+
+In order to use GPG tp sign our commits in GitHub \(remember that one doesn't replace the other, because i thought \[wrongly\] it did, SSH would work like a tunnel for the data being transferred, that's why we can only clone with SSH or HTTPS\). Supposing we have already generated our gpg key, and by the way i imported from my other machine \(laptop\) by sending it via SSH \(safer than putting it on a USB stick\) by: 
+
+`$ scp -rp .gnupg/ henrivis@192.168.0.129:~/`
+
+Remembering that i retrieved the IP address of my other machine by using `$ ifconfig` and checking the `enp2s0` connection \(it's ethernet\). And the -p flag is used to maintain the modification and access times from the original file.
+
+By the way, in order to copy the SSH we would do the same as well:
+
+`$ scp -rp .ssh/ henrivis@192.168.0.129:~/`
+
+`By using this command our generated GPG key is gonna be listed:`
+
+`$ gpg --list-secret-keys --keyid-format LONG`
+
+`Output will be:`
+
+### `/home/henrivis/.gnupg/pubring.kbx`
+
+`sec rsa3072/2A34BE01FB455DE7 2020-08-27 [SC] [expires: 2022-08-27]`
+
+Realize that now in order to generate our GPG public key to paste in GitHub, for instance, we only get this part from the rsa3072: **2A34BE01FB455DE7**
+
+`$ gpg --armor --export 2A34BE01FB455DE7`
+
+Now the public key should be exported correctly.
+
 ## Using same GPG key in Windows 10 \(created originally in Ubuntu\)
 
 ## Hashing vs Encryption
